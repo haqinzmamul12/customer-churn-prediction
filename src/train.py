@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report
 import os 
 import sys 
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def predict(input_df):
     logging.info("Loading the dataset!")
