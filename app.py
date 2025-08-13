@@ -3,6 +3,9 @@ from datetime import datetime
 import pandas as pd
 
 
+# https://customer-churn-app-hwn8.onrender.com
+
+
 from src.train import predict
 
 st.title("Customer Churn Prediction")
