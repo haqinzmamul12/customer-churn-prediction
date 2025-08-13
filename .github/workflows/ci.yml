@@ -26,11 +26,11 @@ jobs:
 
       - name: Run training script (if testable)
         run: |
-          python train.py
+          python src/train.py
 
       - name: Check Streamlit script syntax
         run: |
-          python -m py_compile app.py pipeline.py processing.py
+          python -m py_compile app.py src/pipeline.py src/processing.py
 
       # Optional: run Streamlit in headless test mode (not rendering)
       - name: Test Streamlit app runs without crashing
