@@ -57,5 +57,5 @@ jobs:
 
       - name: Push Docker Image to Hub
         run: | 
-          docker push ${{ secrets.DOCKERHUB_USERNAME }} customer-churn-app
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/customer-churn-app
 
