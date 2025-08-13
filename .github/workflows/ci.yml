@@ -48,7 +48,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: log in to docker hub 
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
       - name: Build Docker image
         run: |
-          docker build -t customer-churn-app .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/customer-churn-app .
+
+      - name: Push Docker Image to Hub
+        run: | 
+          docker push ${{ secrets.DOCKERHUB_USERNAME }} customer-churn-app
 
