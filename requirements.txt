@@ -1,13 +1,7 @@
 numpy 
 pandas 
-scikit-learn 
-joblib 
+scikit-learn  
 matplotlib 
 seaborn
-category_encoder 
-xgboost
-fastapi 
-pydantic
+category-encoders 
 streamlit 
-requests
-uvicorn
