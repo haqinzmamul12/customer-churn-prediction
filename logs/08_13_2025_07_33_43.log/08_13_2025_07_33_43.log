@@ -1,0 +1,8 @@
+[ 2025-08-13 07:38:12,593 ] 9 root - INFO - Loading the dataset!
+[ 2025-08-13 07:38:12,672 ] 19 root - INFO - Splitting the dataset!
+[ 2025-08-13 07:38:12,683 ] 22 root - INFO - Running Pre-processing pipelines!
+[ 2025-08-13 07:38:12,684 ] 25 root - INFO - training the model!
+[ 2025-08-13 07:39:46,078 ] 9 root - INFO - Loading the dataset!
+[ 2025-08-13 07:39:46,092 ] 19 root - INFO - Splitting the dataset!
+[ 2025-08-13 07:39:46,096 ] 22 root - INFO - Running Pre-processing pipelines!
+[ 2025-08-13 07:39:46,096 ] 25 root - INFO - training the model!

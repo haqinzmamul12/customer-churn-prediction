@@ -1,0 +1,39 @@
+name: Streamlit Churn App CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13.2"  # Match your local version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run training script (if testable)
+        run: |
+          python train.py
+
+      - name: Check Streamlit script syntax
+        run: |
+          python -m py_compile app.py pipeline.py processing.py
+
+      # Optional: run Streamlit in headless test mode (not rendering)
+      - name: Test Streamlit app runs without crashing
+        run: |
+          streamlit run app.py --server.headless true &
+          sleep 10

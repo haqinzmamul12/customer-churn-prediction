@@ -1,0 +1,13 @@
+numpy 
+pandas 
+scikit-learn 
+joblib 
+matplotlib 
+seaborn
+category_encoder 
+xgboost
+fastapi 
+pydantic
+streamlit 
+requests
+uvicorn
